@@ -29,8 +29,8 @@ from kubernetes.client import models as k8s
 #   KubernetesExecutor — Coordinator patches the worker pod template with these env vars.
 #   LocalExecutor      — Coordinator adds them to the scheduler Pebble plan;
 #                        LocalExecutor tasks are subprocesses of the scheduler and inherit its env.
-SA        = os.environ.get("SPARK_USERNAME",  "spark")
-NAMESPACE = os.environ.get("SPARK_NAMESPACE", "airflow-spark")
+SA        = os.environ.get("SPARK_USERNAME")
+NAMESPACE = os.environ.get("SPARK_NAMESPACE")
 
 SPARK_IMAGE = "ghcr.io/canonical/charmed-spark:3.5-22.04_edge"
 
